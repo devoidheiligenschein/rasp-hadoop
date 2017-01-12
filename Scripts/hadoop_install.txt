@@ -1,0 +1,17 @@
+#!bin/bash
+
+wget https://www.trieuvan.com/apache/hadoop/common/hadoop-2.7.2/hadoop-2.7.2.tar.gz
+tar -xzvf hadoop-2.7.2.tar.gz
+cd hadoop-2.7.2
+./configure --prefix=/usr
+make
+make check
+sudo make install
+
+cd hadoop-dist/target/
+sudo cp -R hadoop-2.7.2 /opt/hadoop
+
+sudo chown -R faraz.hadoop /opt/hadoop/
+sudo chown -R atul.hadoop /opt/hadoop/
+
+hadoop version
