@@ -18,3 +18,5 @@ Order of running the scripts:
 => Check using 'jps'
 
 => Run mapreduce example 
+
+Instructions with pics: pimagic.wordpress.com
